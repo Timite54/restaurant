@@ -1,88 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delicious Bites Menu</title>
-  </head>
-  <style>
-    span {
-      font-weight: bold;    
-    } 
-   </style>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReGal - Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
+        }
 
-  <body>
-    <h1>Delicious Bites Menu</h1>
-    <h2>Appetizers</h2>
-    <ul>
-      <li>
-        <strong>Salade Caprese</strong>: Tomates fraîches, mozzarella et basilic
-        arrosés d'un glaçage balsamique.
-      </li>
-      <li>
-        <span>Le kelewele</span>: friture de bananes plantins assaisonnées aux épices pimentées.
-      </li>
-      <li>
-        <strong>Bruschetta</strong>: Pain grillé garni de tomates hachées, ail
-        et basilic frais.
-      </li>
-      <li>
-        <span>Douceurs d’avocat au crabe royal</span>: Cette recette fait la part belle au délicieux <span>crabe Royal</span> venu des eaux russes de la mer de Barents et d'Alaska. 
-      </li>
-      <li>
-        <strong>Gougères</strong>: Petits choux au fromage servis chauds.
-      </li>
+        .menu-item {
+            transition: transform 0.3s ease;
+        }
 
-    </ul>
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
 
-    <h2>Main Courses</h2>
-    <ul>
-      <li>
-        <strong>Saumon grillé</strong>: Filet de saumon assaisonné et grillé à
-        la perfection, servi avec une sauce au beurre citronné.
-      </li>
-      <li>
-        <span>Saumon Fumé Sauvage</span>: Notre saumon fumé sauvage provient exclusivement de la mer Baltique.  Surnommé <span>Blond de la mer Baltique</span>, ce saumon à la couleur caractéristique est fileté à la main et fumé au bois de hêtre.
-      </li>
-      <li>
-        <span>Brochettes</span>: poulet marinées cuites sur braise
-      </li>
-      <li>
-        <strong>Poulet au citron</strong>: Blanc de poulet mariné, rôti et servi
-        avec des légumes de saison.
-      </li>
-      <li>
-        <strong>Pâtes Primavera</strong>: Pâtes fraîches avec des légumes de
-        saison et une sauce légère à l'ail.
-      </li>
-    </ul>
+        .menu-image-placeholder {
+            background-color: #f8f9fa;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold" href="#">ReGal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <h2>Desserts</h2>
-    <ul>
-      <li>
-        <strong>Fondue au chocolat</strong>: Assortiment de fruits et de
-        guimauves servis avec une riche fondue au chocolat.
-      </li>
-      <li>
-        <strong>Tarte Tatin</strong>: Tarte aux pommes caramélisées servie tiède
-        avec de la crème fraîche.
-      </li>
-      <li>
-        <strong>Mousse au chocolat</strong>: Mousse légère et aérienne au
-        chocolat noir, garnie de crème fouettée.
-      </li>
-      <li>
-        <span>Le caviar Sevruga</span>: Issu de l'esturgeon autrefois le plus répandu en mer Caspienne, il revient sur le devant de la scène. A la fois puissant et délicat, ce nouveau caviar se hisse déjà au rang des plus grands
-      </li>
-      <li>
-        <span>Crumble sucré</span>: dessert d’origine britannique composé d’une couche de fruits dans le fond du plat, et d’une couche de pâte à l’apparence émiettée, appelée aussi « tomber en miette ». 
-      </li>
-    </ul>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-section d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-1 fw-bold mb-4">ReGal</h1>
+            <p class="lead mb-4">Une expérience culinaire exceptionnelle</p>
+            <a href="#menu" class="btn btn-light btn-lg">Découvrir notre menu</a>
+        </div>
+    </section>
 
-    <p>
-      <a href="https://github.com/Timite54/projet_portfolio" target="_blank"
-        >Contactez-nous pour les réservations</a
-      >
-    </p>
-  </body>
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Notre Menu</h2>
+            <div class="row g-4">
+                <!-- Menu Item 1 -->
+                <div class="col-md-4">
+                    <div class="card menu-item h-100">
+                        <div class="menu-image-placeholder">
+                            <i class="bi bi-image fs-1"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Plat Signature</h5>
+                            <p class="card-text">Description détaillée du plat signature avec ses ingrédients principaux.</p>
+                            <p class="card-text"><strong>29.99 €</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="col-md-4">
+                    <div class="card menu-item h-100">
+                        <div class="menu-image-placeholder">
+                            <i class="bi bi-image fs-1"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Spécialité du Chef</h5>
+                            <p class="card-text">Une création unique qui met en valeur les saveurs locales.</p>
+                            <p class="card-text"><strong>34.99 €</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="col-md-4">
+                    <div class="card menu-item h-100">
+                        <div class="menu-image-placeholder">
+                            <i class="bi bi-image fs-1"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert Gourmand</h5>
+                            <p class="card-text">Une douceur inoubliable pour terminer votre repas en beauté.</p>
+                            <p class="card-text"><strong>12.99 €</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="menu-image-placeholder rounded">
+                        <i class="bi bi-image fs-1"></i>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">À propos de nous</h2>
+                    <p class="lead">ReGal, c'est avant tout une histoire de passion pour la gastronomie française.</p>
+                    <p>Notre restaurant vous propose une cuisine raffinée et créative, élaborée à partir de produits frais et de saison. Notre chef et son équipe mettent tout leur savoir-faire au service de votre plaisir gustatif.</p>
+                    <p>Nous nous engageons à vous offrir une expérience culinaire mémorable dans un cadre élégant et chaleureux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contactez-nous</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 ReGal. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
