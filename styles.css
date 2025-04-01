@@ -1,0 +1,25 @@
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
+        }
+
+        .menu-item {
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-image-placeholder {
+            background-color: #f8f9fa;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+        }
